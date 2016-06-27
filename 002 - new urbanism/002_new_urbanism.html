@@ -1,0 +1,342 @@
+<!-- THEME BY: moethemes.tumblr.com [aka] https://github.com/onekam -->
+<!-- for live preview see moethemes-newurbanism.tumblr.com -->
+<html>
+    <head>
+    <link href='http://fonts.googleapis.com/css?family=Noto+Sans|Alegreya' rel='stylesheet' type='text/css'>
+
+        <title>{Title}</title>
+        <link rel="shortcut icon" href="{Favicon}">
+        <link rel="alternate" type="application/rss+xml" href="{RSS}">
+        {block:Description}
+            <meta name="description" content="{MetaDescription}" />
+        {/block:Description}
+
+        <meta name="color:Ask Background" content="#e8e8e8"/>
+        <meta name="color:Background Color" content="#fff"/>
+        <meta name="color:Blockquote Accent" content="#e8e8e8"/>
+        <meta name="color:Chat Person One" content="#e8e8e8"/>
+        <meta name="color:Chat Person Two" content="#fff"/>
+        <meta name="color:Container Background" content="#fff"/>
+        <meta name="color:Links" content="#3B7A57"/>
+        <meta name="color:Navigation Background" content="#000"/>
+        <meta name="color:Navigation Links" content="#fff"/>
+        <meta name="color:Notes Border" content="#525252"/>
+        <meta name="color:Scrollbar Bottom" content="#000"/>
+        <meta name="color:Scrollbar" content="#fff"/>
+        <meta name="color:Tags" content="#3B7A57"/>
+        <meta name="color:Text" content="#000"/>
+        <meta name="color:Text Accent" content="#3B7A57"/>
+
+        <meta name="if:Background Image" content="1"/>
+
+        <meta name="image:Background" content="http://static.tumblr.com/..."/>
+
+        <meta name="text:Link 1 Name" content="link"/>
+        <meta name="text:Link 1 URL" content=""/>
+        <meta name="text:Link 2 Name" content="link"/>
+        <meta name="text:Link 2 URL" content=""/>
+        <meta name="text:Link 3 Name" content="link"/>
+        <meta name="text:Link 3 URL" content=""/>
+        <meta name="text:Link 4 Name" content="link"/>
+        <meta name="text:Link 4 URL" content=""/>
+        <meta name="text:Link 5 Name" content="link"/>
+        <meta name="text:Link 5 URL" content=""/>
+
+
+        <style type="text/css">
+            ::-webkit-scrollbar {
+                width:5px;
+                height:5px;
+            }
+            ::-webkit-scrollbar-track {
+                background:{color:Scrollbar Bottom};
+                border:2px solid rgba(0, 0, 0, 0.0);
+                -moz-background-clip: border;
+                -webkit-background-clip: border;
+                background-clip: border-box;
+
+                -moz-background-clip: padding;
+                -webkit-background-clip: padding;
+                background-clip: padding-box;
+
+                -moz-background-clip: content;
+                -webkit-background-clip: content;
+                background-clip: content-box;
+            }
+            ::-webkit-scrollbar-thumb {
+                background:{color:Scrollbar};
+                -webkit-border-radius: 30px;
+                -moz-border-radius: 30px;
+                border-radius: 30px; }
+            ::-webkit-scrollbar-thumb:window-inactive {
+                background: rgba(200,200,200,0.4);
+            }
+        body {
+            position: absolute;
+            height: 100%;
+            {block:ifBackgroundImage}
+            background: url('{image:Background}');
+            background-repeat: repeat;
+            {/block:ifBackgroundImage}
+            {block:ifNotBackgroundImage}
+            background: {color:Background Color};
+            {/block:ifNotBackgroundImage}
+            word-wrap: break-word;
+            font-family: 'Noto Sans', sans-serif;
+            font-size: 10px;
+            color: {color:Text};
+            margin-left: calc(50% - 300px)
+            }
+        a {
+            text-decoration: none;
+            color: {color:Links};
+            }
+        b, strong{
+            font-weight: bold;
+            color: {color:Text Accent};
+            letter-spacing: 1px;
+        }
+        i, em{
+            font-style: italic;
+            color: {color:Text Accent};
+            letter-spacing: 1px;
+        }
+        #title{
+            font-family: 'Alegreya', serif;
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: -25px;
+            text-transform: uppercase;
+        }
+        .posttitle{
+            text-transform: uppercase;
+            font-size: 18px;
+            font-family: 'Alegreya', serif;
+        }
+        #posts{
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+        .post{
+            width: 500px;
+            margin: 0 auto;
+        }
+        #container{
+            position: relative;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            width: 550px;
+            height: calc(100% - 100px);
+            margin: 0 auto;
+            border-right-style: dotted;
+            border-left-style: dotted;
+            border-width: 1px;
+            background: {color:Container Background};
+        }
+        .nav{
+            background: {color:Navigation Background};
+            width: 575px;
+            height: 14px;
+            margin: 0 auto;
+            margin-bottom: 0px;
+            padding-top: 2px;
+            padding-bottom: 2px;
+            font-size: 10px;
+            text-align: center;
+        }
+        .nav a{
+            width: 50px;
+            margin-left:10px;
+            margin-right:10px;
+            text-decoration:none;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: {color:Navigation Links};
+        }
+        .notes {
+                padding: 0px;
+                margin-left: 10px;
+                margin-right: 10px;
+                margin-top: 10px;
+                margin-bottom: 5px;
+                list-style-type: none;
+                color: {color:Text};
+                text-transform: uppercase;
+                font-size: 9px;
+                text-align: center;
+                border-style: dotted;
+                border-color: {color:Notes Border};
+                border-width: 1px;
+                padding-top: 3px;
+                padding-bottom: 3px;
+                width: 500px;
+                font-family: 'Alegreya', serif;
+
+            }
+            .notes a {
+                letter-spacing: 2px;
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+            #tags {
+                font-size: 9px;
+                margin-left:12px;
+                margin-right: 12px;
+                letter-spacing: 1px;
+                font-style: normal;
+                margin-bottom: 30px;
+                text-align: left;
+                text-transform: lowercase;
+                }
+            #tags a{
+                color: {color:Tags};
+            }
+            blockquote{
+                border-left: 1px dashed {color:Blockquote Accent};
+                padding-left: 5px;
+                margin-left: 10px;
+            }
+            .odd, .even{
+                padding: 3px;
+            }
+            .odd{
+                background: {color:Chat Person One};
+            }
+            .even{
+                background: {color:Chat Person Two};
+            }
+                .ask{
+                width: 496px;
+                background: {color:Ask Background};
+                text-transform: uppercase;
+                margin: 0 auto;
+                letter-spacing: 1px;
+                padding: 3px 3px 3px 3px;
+                min-height: 48px;
+            }
+            .ask img{
+                float: left;
+                margin-right: 5px;
+            }
+            .answer{
+                margin: 0 auto;
+                width: 496px;
+                background: {color:Ask Background};
+                text-align: right;
+                margin-top: 10px;
+                padding: 3px 3px 3px 3px;
+                min-height: 48px;
+            }
+            .answer img{
+                float: right;
+                margin-left: 5px;
+            }
+            .asklabel{
+                color: #000;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="title" margin:0 auto;>{Title}</div>
+
+<div class="nav" style="margin-top: 20px"><a href="/">home</a><a href="/ask">ask</a><a href="http://moethemes.tumblr.com/">theme</a><a href={text:Link 1 URL}>{text:Link 1 Name}</a><a href={text:Link 2 URL}>{text:Link 2 Name}</a><a href={text:Link 3 URL}>{text:Link 3 Name}</a><a href={text:Link 4 URL}>{text:Link 4 Name}</a><a href={text:Link 5 URL}>{text:Link 5 Name}</a>
+</div>
+<div id="container">
+        <div id="posts">
+            {block:Posts}{block:Text}
+                    <div class="post text">
+                        {block:Title}
+                            <span class="posttitle">{Title}</span>
+                        {/block:Title}{Body}
+                    </div>
+                {/block:Text}{block:Photo}
+                    <div class="post photo">
+                        <center><img src="{PhotoURL-500}" alt="{PhotoAlt}"/></center>
+
+                        {block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+                    </div>
+                {/block:Photo}{block:Panorama}
+                    <div class="post panorama">
+                        {LinkOpenTag}
+                            <center><img src="{PhotoURL-Panorama}" alt="{PhotoAlt}"/></center>
+                        {LinkCloseTag}{block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+                    </div>
+                {/block:Panorama}{block:Photoset}
+                    <div class="post photoset">
+                        <center>{Photoset-500}</center>{block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+                    </div>
+                {/block:Photoset}{block:Quote}
+                    <div class="post quote">
+                        <span class="posttitle">"{Quote}"</span>
+
+                        {block:Source}
+                            <div class="source">— {Source}</div>
+                        {/block:Source}
+                    </div>
+                {/block:Quote}{block:Link}
+                    <div class="post link">
+                        <a href="{URL}" class="link" {Target}>{Name}</a>
+
+                        {block:Description}
+                            <div class="description">{Description}</div>
+                        {/block:Description}
+                    </div>
+                {/block:Link}{block:Chat}
+                    <div class="post chat">
+                        {block:Title}
+                            <span class="posttitle">{Title}</span>
+                        {/block:Title}
+
+                        <div class="post chat">
+                            {block:Lines}
+                                <div class="{Alt} user_{UserNumber}">
+                                    {block:Label}
+                                        <span class="label">{Label}</span>
+                                    {/block:Label}{Line}
+                                </div>
+                            {/block:Lines}
+                        </div>
+                    </div>
+                {/block:Chat}{block:Video}
+                    <div class="post video">
+                        {Video-500}{block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+                    </div>
+                {/block:Video}{block:Audio}
+                    <div class="post audio">
+                        {AudioEmbed}{block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+                    </div>
+                {/block:Audio}{block:Answer}<div class="ask"><img src="{AskerPortraitURL-48}"><span class="asklabel">{Asker} asked: </span>{Question}</div>{block:Answerer}<div class="answer"><img src="{AnswererPortraitURL-48}"><span class="asklabel">{Answerer} answered: </span>{Answer}</div>{/block:Answerer} <div class="replies">
+        {Replies}
+    </div>{/block:Answer}
+               {block:IndexPage}<center><div class="notes">
+<a href="{Permalink}">{Month} {DayOfMonthWithZero}</a>+<a href="{Permalink}">{NoteCount} notes</a>+<a href="{ReblogURL}">reblog</a>{block:RebloggedFrom} +<a style="margin-left:6px"text="{ReblogParentName}"href="{ReblogParentURL}" > via</a>+<a style="margin-left:6px"href="{ReblogRootURL}" text="{ReblogRootName}">source</a>{/block:RebloggedFrom}</div></center>
+<div id="tags">{block:HasTags}<b>tags &raquo;</b> {block:Tags} #<a href="/tagged/{Tag}">{Tag}</a>{/block:Tags}{/block:HasTags}
+</div>{/block:IndexPage}
+
+                {block:PermalinkPagination}<center><div class="notes">
+<a href="{Permalink}">{Month} {DayOfMonthWithZero}</a>+<a href="{Permalink}">{NoteCount} notes</a>+<a href="{ReblogURL}">reblog</a>{block:RebloggedFrom} +<a style="margin-left:6px"text="{ReblogParentName}"href="{ReblogParentURL}" > via</a>+<a style="margin-left:6px"href="{ReblogRootURL}" text="{ReblogRootName}">source</a>{/block:RebloggedFrom}</div></center>
+<div id="tags">{block:HasTags}<b>tags &raquo;</b> {block:Tags} #<a href="/tagged/{Tag}">{Tag}</a>{/block:Tags}{/block:HasTags}
+</div>{/block:PermalinkPagination}
+                {block:PostNotes}
+<div class="post">{PostNotes}</div>
+{/block:PostNotes}
+                {/block:Posts}
+        </div>
+        </div><!-- ends the container -->
+        <div class="nav">
+                            <span style="float:left">{block:PreviousPage}<a href="{PreviousPage}">PREV</a>{/block:PreviousPage}</span><span style="float: right">{block:NextPage}<a href="{NextPage}" >NEXT</a>{/block:NextPage}</span>
+</div>
+    </body>
+</html>
