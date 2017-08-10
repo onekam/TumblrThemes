@@ -1,0 +1,398 @@
+<!-- THEME BY: moethemes.tumblr.com [aka] https://github.com/onekam -->
+<!-- for live preview see moethemes-sarabande.tumblr.com -->
+
+<html>
+    <head>
+<link href='http://fonts.googleapis.com/css?family=Nova+Mono|Source+Code+Pro|Anonymous+Pro' rel='stylesheet' type='text/css'>
+        <title>{Title}</title>
+        <divnk rel="shortcut icon" href="{Favicon}">
+        <divnk rel="alternate" type="application/rss+xml" href="{RSS}">
+        {block:Description}
+        <meta name="description" content="{MetaDescription}" />
+        {/block:Description}
+
+        <meta name="color:Borders" content="#e8e8e8"/>
+        <meta name="color:Links" content="#577bea"/>
+        <meta name="color:Post and Sidebar Background" content="#fff"/>
+        <meta name="color:Text" content="#888"/>
+        <meta name="color:Scrollbar" content="#fff"/>
+        <meta name="color:Scrollbar Background" content="#000"/>
+
+
+        <meta name="image:Background" content="http://static.tumblr.com/..."/>
+
+        <meta name="text:Link 1 Name" content="Link 1"/>
+        <meta name="text:Link 1 URL"/>
+        <meta name="text:Link 2 Name" content="Link 2"/>
+        <meta name="text:Link 2 URL"/>
+        <meta name="text:Link 3 Name" content="Link 3"/>
+        <meta name="text:Link 3 URL"/>
+        <meta name="text:Link 4 Name" content="Link 4"/>
+        <meta name="text:Link 4 URL"/>
+        <meta name="text:Link 5 Name" content="Link 5"/>
+        <meta name="text:Link 5 URL"/>
+
+        <meta name="select:Font" content="Nova Mono" title="Font 1">
+        <meta name="select:Font" content="Source Code Pro" title="Font 2">
+        <meta name="select:Font" content="Anonymous Pro" title="Font 3">
+
+
+                <style type="text/css">
+
+           ::-webkit-scrollbar-thumb:vertical {
+           height:9px;
+           background-color: {color:Scrollbar};
+       }
+       ::-webkit-scrollbar {
+           width:5px;
+           height:10px;
+           background: {color:Scrollbar Background};
+           margin-right:5px;
+           }
+
+                body{
+                    background: url('{image:Background}');
+                    background-repeat: repeat;
+                    word-wrap: break-word;
+                    font-family: {select:Font}, monospace;
+                    font-size: 10px;
+                }
+                #title{
+                    border-left: 1px solid {color:Borders};
+                    border-right: 1px solid {color:Borders};
+                    border-top: 1px solid {color:Borders};
+                    width: 164px;
+                    font-family: {select:Font}, monospace;
+                    text-transform: uppercase;
+                    color: #888;
+                    font-size: 12px;
+                    text-align: center;
+                    background: {color:Post and Sidebar Background};
+                }
+                #desc{
+                    padding: 3px 3px 3px 3px;
+                    border-left: 1px solid {color:Borders};
+                    border-right: 1px solid {color:Borders};
+                    border-top: 1px dashed {color:Borders};
+                    min-height: 25px;
+                    width: 158px;
+                    color: {color:Text};
+                    font-size: 10px;
+                    font-family: {select:Font}, monospace;
+                    background:  {color:Post and Sidebar Background};
+                    text-align: justify;
+                }
+                a{
+                    text-decoration: none;
+                    color: {color:Links};
+                }
+                .post a:hover, .notes a:hover{
+                    border-bottom: 1px dotted {color:Links};
+                }
+                .tag span:hover{
+                    border-bottom: 1px dotted {color:Links};
+                }
+                #container{
+                    font-family: {select:Font}, monospace;
+                    font-size: 10px;
+                    position: absolute;
+                    top: 0;
+                    overflow-y: scroll;
+                    overflow-x: hidden;
+                    width: 550px;
+                    height: 100%;
+                    margin-left: 300px;
+                    float: left;
+                }
+                .whitekey{
+                    width: 20px;
+                    height: 100px;
+                    background: #fff;
+                    margin-right: 2px;
+                    overflow: hidden;
+                    display: inline-block;
+                    border-left: 1px solid;
+                    border-right: 1px solid;
+                    border-bottom: 1px solid;
+                    border-color: #e8e8e8;
+                    z-index: 1;
+
+                }
+                .whitekey:hover{
+                    background: #e8e8e8;
+                    border: 1px 1px 0px 1px solid;
+                    border-color: #c8c8c8;
+                    cursor: pointer;
+                }
+                .blackkey{
+                    position: absolute;
+                    background: #101010;
+                    border: 1px solid;
+                    border-color: #282828;
+                    width: 14px;
+                    height: 55px;
+                    z-index: 2;
+                }
+                #piano{
+                    float:left;
+                    position: relative;
+
+                }
+                #piano a {
+                    text-decoration: none;
+                }
+                #piano a:hover {
+                    cursor: help;
+                    position: relative;
+                }
+                #piano a span {
+                    display: none;
+                }
+                #piano a:hover span {
+                   font-family: {select:Font}, monospace;
+                    font-size: 10px;
+                    border: #c0c0c0 1px dotted;
+                    padding: 5px 5px 5px 5px;
+                    display: block;
+                    z-index: 100;
+                    background:  #f0f0f0;
+                    left: 0px;
+                    margin-top: 10px;
+                    position: absolute;
+                    top: 10px;
+                    text-decoration: none;
+                }
+                #posts{
+                    padding-left: 20px;
+                }
+                .post{
+                    color: {color:Text};
+                    background: {color:Post and Sidebar Background};
+                    padding: 3px 3px 3px 3px;
+                    width: 500px;
+                    margin-top: 5px;
+                    border-left: 1px solid {color:Borders};
+                    border-right: 1px solid {color:Borders};
+                    border-top: 1px solid {color:Borders};
+                    border-bottom: 1px dashed {color:Borders};
+                }
+                .posttitle{
+                    text-transform: uppercase;
+                    font-size: 14px;
+                    margin-bottom: 5px;
+                }
+                blockquote{
+                    border-left: 1px dotted {color:Borders};
+                    padding-left: 4px;
+                    margin-left: 10px;
+                }
+                #side{
+                    margin-left: 40px;
+                    margin-top: 50px;
+                }
+                #sidebar{
+                    background: {color:Post and Sidebar Background};
+                    border: 1px solid {color:Borders};
+                    height: 150px;
+                    width: 164px;
+                }
+                #credit{
+                    border-top: 1px dashed {color:Borders};
+                    border-left: 1px solid {color:Borders};
+                    border-right: 1px solid {color:Borders};
+                    border-bottom: 1px solid {color:Borders};
+                    width: 164px;
+                    font-family: {select:Font}, monospace;
+                    text-transform: uppercase;
+                    color: {color:Text};
+                    font-size: 8px;
+                    text-align: center;
+                    background: {color:Post and Sidebar Background};
+                }
+                #pag{
+                    background: {color:Post and Sidebar Background};
+                    width: 164px;
+                    border-left: 1px solid {color:Borders};
+                    border-right: 1px solid {color:Borders};
+                    font-family: {select:Font}, monospace;
+                    font-size: 10px;
+                    text-align: center;
+                    color: {color:Text};
+                    text-transform: uppercase;
+                }
+                .notes{
+                    text-transform: uppercase;
+                }
+                #tags{
+                    font-size: 8px;
+                }
+                #extra{
+                    width: 496px;
+                    padding-left: 5px;
+                    padding-right: 5px;
+                    padding-top: 3px;
+                    padding-bottom: 3px;
+                    border-left: 1px solid {color:Borders};
+                    border-right: 1px solid {color:Borders};
+                    border-bottom: 1px solid {color:Borders};
+                    background: {color:Post and Sidebar Background};
+                }
+                span.tagtail + a.tag:before {
+                   content:", ";
+                }
+                .odd, .even{
+                    padding: 3px;
+                }
+                .odd{
+                    background: {color:Borders};
+                }
+                .asks{
+                padding: 3px 3px 3px 3px;
+                background: {color:Borders};
+                color: {color:Text};
+                width: 494px;
+                margin-top: 3px;
+                display: inline-block;
+            }
+            .asks img{
+                padding: 3px 3px 3px 3px;
+            }
+            .answer{
+                padding: 3px 3px 3px 3px;
+                border: 1px solid {color:Borders};
+                width: 492px;
+                margin-top: 3px;
+                margin-bottom: 3px;
+                display: inline-block;
+            }
+            .answer img{
+                padding: 3px 3px 3px 3px;
+            }
+
+                </style>
+    </head>
+    <body>
+        <div style="width: 900px; margin: 0 auto">
+      <div id="side">
+      <div id="title">{Title}</div>
+      <div id="desc">{Description}</div>
+      <div id="pag"> <span style="float:bottom">{block:Pagination}
+<div id="pagination">
+      {block:PreviousPage}
+            <a href="{PreviousPage}">Previous</a>
+      {/block:PreviousPage}
+
+      {block:JumpPagination length="5"}
+            {block:CurrentPage}
+                  <span class="current_page">{PageNumber}</span>
+            {/block:CurrentPage}
+
+            {block:JumpPage}
+                  <a class="jump_page" href="{URL}">{PageNumber}</a>
+            {/block:JumpPage}
+      {/block:JumpPagination}
+
+      {block:NextPage}
+            <a href="{NextPage}">Next</a>
+      {/block:NextPage}
+</div>
+{/block:Pagination}</span></div>
+      <div id="credit"><a href="http://www.moethemes.tumblr.com/">theme by moethemes</a></div>
+      <div id="piano">
+      <a href="/"><div class="whitekey"></div><span>home</span></a><a href="/ask"><div class="whitekey"></div><span>ask</span></a><a href={text:Link 1 URL}><div class="whitekey"></div><span>{text:Link 1 Name}</span></a><a href={text:Link 2 URL}><div class="whitekey"></div><span>{text:Link 2 Name}</span></a><a href={text:Link 3 URL}><div class="whitekey"></div><span>{text:Link 3 Name}</span></a><a href={text:Link 4 URL}><div class="whitekey"></div><span>{text:Link 4 Name}</span></a><a href={text:Link 5 URL}><div class="whitekey" style="margin-right: 20px"></div><span>{text:Link 5 Name}</span></a>
+
+<div class="blackkey" style="top:0px; margin-left: 15px; "></div><div class="blackkey" style="top:0px; margin-left: 39px; "></div><div class="blackkey" style="top:0px; margin-left: 87px; "></div><div class="blackkey" style="top:0px; margin-left: 111px; "></div><div class="blackkey" style="top:0px; margin-left: 135px; "></div>
+</div></div>
+
+        <div id="container">
+        <div id="posts">
+            {block:Posts}{block:Text}
+                    <div class="post text">
+                        {block:Title}
+                            <div class="posttitle">{Title}</div>
+                        {/block:Title}{Body}
+                    </div>
+                {/block:Text}{block:Photo}
+                    <div class="post photo">
+                        <center><img src="{PhotoURL-500}" alt="{PhotoAlt}"/></center>
+
+                        {block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+                    </div>
+                {/block:Photo}{block:Panorama}
+                    <div class="post panorama">
+                        {LinkOpenTag}
+                            <img src="{PhotoURL-Panorama}" alt="{PhotoAlt}"/>
+                        {LinkCloseTag}{block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+                    </div>
+                {/block:Panorama}{block:Photoset}
+                    <div class="post photoset">
+                        {Photoset-500}{block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+                    </div>
+                {/block:Photoset}{block:Quote}
+                    <div class="post quote">
+                        "{Quote}"
+
+                        {block:Source}
+                            <div class="source">{Source}</div>
+                        {/block:Source}
+                    </div>
+                {/block:Quote}{block:Link}
+                    <div class="post link">
+                        <div class="posttitle"><a href="{URL}" class="link" {Target}>{Name}</a></div>
+
+                        {block:Description}
+                            <div class="description">{Description}</div>
+                        {/block:Description}
+                    </div>
+                {/block:Link}{block:Chat}
+                    <div class="post chat">
+                        {block:Title}
+                            <div class="posttitle">{Title}</div>
+                        {/block:Title}
+
+                        <div class="chat">
+                            {block:Lines}
+                                <div class="{Alt} user_{UserNumber}">
+                                    {block:Label}
+                                        <span class="label">{Label}</span>
+                                    {/block:Label}{Line}
+                                </div>
+                            {/block:Lines}
+                        </div>
+                    </div>
+                {/block:Chat}{block:Video}
+                    <div class="post video">
+                        {Video-500}{block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+                    </div>
+                {/block:Video}{block:Audio}
+                    <div class="post audio">
+                        {AudioEmbed}{block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+                    </div>
+                {/block:Audio}{block:Answer}<div class="post ask"><div class="asks"><img src="{AskerPortraitURL-36}"style="float:left;"><span class="asklabel">{Asker} asked: </span>{Question}</div><div class="answer"><img src="{AnswererPortraitURL-36}" style="float:left;">{block:Answerer}<span class="asklabel">{Answerer} answered: </span>{/block:Answerer}{Answer}</div> <div class="replies">
+        {Replies}
+    </div></div>{/block:Answer}
+
+                <div id="extra"><div class="notes">
+<a href="{Permalink}">{Month} {DayOfMonthWithZero}</a> <a style="margin-left:10px" href="{Permalink}">{NoteCount} notes</a> {block:RebloggedFrom} <a style="margin-left:10px"text="{ReblogParentName}"href="{ReblogParentURL}" >via</a> <a style="margin-left:10px"href="{ReblogRootURL}" text="{ReblogRootName}">source</a>{/block:RebloggedFrom} <a href="{ReblogURL}"style="margin-left:10px">reblog</a></div>
+                <div id="tags">{block:HasTags}{block:Tags}<a class="tag" href="{TagURL}"><span>{Tag}</span></a><span class="tagtail"></span>{/block:Tags}{/block:HasTags}
+</div></div>
+
+{block:PostNotes}
+<div class="post">{PostNotes}</div>
+{/block:PostNotes}
+                {/block:Posts}
+        </div>
+        </div>
+        </div>
+    </body>
+</html>
