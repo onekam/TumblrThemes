@@ -1,3 +1,7 @@
 # removes video files
 *.mov
+
+# removes photo files
 *.gif
+*.jpg
+*.png
