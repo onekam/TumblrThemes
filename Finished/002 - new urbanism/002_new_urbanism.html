@@ -1,16 +1,17 @@
 <!-- THEME BY: moethemes.tumblr.com [aka] https://github.com/onekam -->
 <!-- for live preview see moethemes-newurbanism.tumblr.com -->
-<html>
-    <head>
-    <link href='http://fonts.googleapis.com/css?family=Noto+Sans|Alegreya' rel='stylesheet' type='text/css'>
 
+<html>
+    <head>  
+    <link href='http://fonts.googleapis.com/css?family=Noto+Sans|Alegreya' rel='stylesheet' type='text/css'>
+    
         <title>{Title}</title>
         <link rel="shortcut icon" href="{Favicon}">
         <link rel="alternate" type="application/rss+xml" href="{RSS}">
         {block:Description}
             <meta name="description" content="{MetaDescription}" />
         {/block:Description}
-
+        
         <meta name="color:Ask Background" content="#e8e8e8"/>
         <meta name="color:Background Color" content="#fff"/>
         <meta name="color:Blockquote Accent" content="#e8e8e8"/>
@@ -26,11 +27,11 @@
         <meta name="color:Tags" content="#3B7A57"/>
         <meta name="color:Text" content="#000"/>
         <meta name="color:Text Accent" content="#3B7A57"/>
-
+        
         <meta name="if:Background Image" content="1"/>
-
+        
         <meta name="image:Background" content="http://static.tumblr.com/..."/>
-
+        
         <meta name="text:Link 1 Name" content="link"/>
         <meta name="text:Link 1 URL" content=""/>
         <meta name="text:Link 2 Name" content="link"/>
@@ -41,11 +42,13 @@
         <meta name="text:Link 4 URL" content=""/>
         <meta name="text:Link 5 Name" content="link"/>
         <meta name="text:Link 5 URL" content=""/>
+        <meta name="text:Link 6 Name" content="link"/>
+        <meta name="text:Link 6 URL" content=""/>
 
-
+        
         <style type="text/css">
-            ::-webkit-scrollbar {
-                width:5px;
+            ::-webkit-scrollbar { 
+                width:5px; 
                 height:5px;
             }
             ::-webkit-scrollbar-track {
@@ -54,22 +57,22 @@
                 -moz-background-clip: border;
                 -webkit-background-clip: border;
                 background-clip: border-box;
-
+            
                 -moz-background-clip: padding;
                 -webkit-background-clip: padding;
                 background-clip: padding-box;
-
+                                           
                 -moz-background-clip: content;
                 -webkit-background-clip: content;
                 background-clip: content-box;
             }
-            ::-webkit-scrollbar-thumb {
-                background:{color:Scrollbar};
-                -webkit-border-radius: 30px;
-                -moz-border-radius: 30px;
+            ::-webkit-scrollbar-thumb { 
+                background:{color:Scrollbar};  
+                -webkit-border-radius: 30px; 
+                -moz-border-radius: 30px; 
                 border-radius: 30px; }
-            ::-webkit-scrollbar-thumb:window-inactive {
-                background: rgba(200,200,200,0.4);
+            ::-webkit-scrollbar-thumb:window-inactive { 
+                background: rgba(200,200,200,0.4); 
             }
         body {
             position: absolute;
@@ -172,7 +175,7 @@
                 padding-bottom: 3px;
                 width: 500px;
                 font-family: 'Alegreya', serif;
-
+              
             }
             .notes a {
                 letter-spacing: 2px;
@@ -208,7 +211,7 @@
             }
                 .ask{
                 width: 496px;
-                background: {color:Ask Background};
+                background: {color:Ask Background}; 
                 text-transform: uppercase;
                 margin: 0 auto;
                 letter-spacing: 1px;
@@ -222,7 +225,7 @@
             .answer{
                 margin: 0 auto;
                 width: 496px;
-                background: {color:Ask Background};
+                background: {color:Ask Background}; 
                 text-align: right;
                 margin-top: 10px;
                 padding: 3px 3px 3px 3px;
@@ -238,10 +241,10 @@
 
         </style>
     </head>
-    <body>
+    <body> 
         <div id="title" margin:0 auto;>{Title}</div>
 
-<div class="nav" style="margin-top: 20px"><a href="/">home</a><a href="/ask">ask</a><a href="http://moethemes.tumblr.com/">theme</a><a href={text:Link 1 URL}>{text:Link 1 Name}</a><a href={text:Link 2 URL}>{text:Link 2 Name}</a><a href={text:Link 3 URL}>{text:Link 3 Name}</a><a href={text:Link 4 URL}>{text:Link 4 Name}</a><a href={text:Link 5 URL}>{text:Link 5 Name}</a>
+<div class="nav" style="margin-top: 20px"><a href="/">home</a><a href="/ask">ask</a><a href={text:Link 1 URL}>{text:Link 1 Name}</a><a href={text:Link 2 URL}>{text:Link 2 Name}</a><a href={text:Link 3 URL}>{text:Link 3 Name}</a><a href={text:Link 4 URL}>{text:Link 4 Name}</a><a href={text:Link 5 URL}>{text:Link 5 Name}</a><a href={text:Link 6 URL}>{text:Link 6 Name}</a>
 </div>
 <div id="container">
         <div id="posts">
@@ -324,7 +327,7 @@
 <a href="{Permalink}">{Month} {DayOfMonthWithZero}</a>+<a href="{Permalink}">{NoteCount} notes</a>+<a href="{ReblogURL}">reblog</a>{block:RebloggedFrom} +<a style="margin-left:6px"text="{ReblogParentName}"href="{ReblogParentURL}" > via</a>+<a style="margin-left:6px"href="{ReblogRootURL}" text="{ReblogRootName}">source</a>{/block:RebloggedFrom}</div></center>
 <div id="tags">{block:HasTags}<b>tags &raquo;</b> {block:Tags} #<a href="/tagged/{Tag}">{Tag}</a>{/block:Tags}{/block:HasTags}
 </div>{/block:IndexPage}
-
+                
                 {block:PermalinkPagination}<center><div class="notes">
 <a href="{Permalink}">{Month} {DayOfMonthWithZero}</a>+<a href="{Permalink}">{NoteCount} notes</a>+<a href="{ReblogURL}">reblog</a>{block:RebloggedFrom} +<a style="margin-left:6px"text="{ReblogParentName}"href="{ReblogParentURL}" > via</a>+<a style="margin-left:6px"href="{ReblogRootURL}" text="{ReblogRootName}">source</a>{/block:RebloggedFrom}</div></center>
 <div id="tags">{block:HasTags}<b>tags &raquo;</b> {block:Tags} #<a href="/tagged/{Tag}">{Tag}</a>{/block:Tags}{/block:HasTags}
@@ -338,5 +341,6 @@
         <div class="nav">
                             <span style="float:left">{block:PreviousPage}<a href="{PreviousPage}">PREV</a>{/block:PreviousPage}</span><span style="float: right">{block:NextPage}<a href="{NextPage}" >NEXT</a>{/block:NextPage}</span>
 </div>
+<div style="position: fixed; bottom: 0; left:0; background-color: white; font-size: 8px; opacity:0.6; font-family: consolas, courier new, monospace; padding: 2px"><a href="http://moethemes.tumblr.com" style="color: black">theme by moethemes</a></div>
     </body>
 </html>
