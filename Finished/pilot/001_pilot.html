@@ -244,7 +244,7 @@ border-top-right-radius:8px;
                 text-align: center;
                 background: {color:Permalink Background};
                 {block:ifNotesBorder}
-                    border-style: dotted;
+                    border-style: solid;
                     border-color: {color:Notes Border};
                     border-width: 1px;
                 {/block:ifNotesBorder}
@@ -256,7 +256,7 @@ border-top-right-radius:8px;
             }
             blockquote{
                 margin-left: 10px;
-                border-left: 1px dotted;
+                border-left: 1px solid;
                 padding-left: 5px;
                 border-color: {color:Blockquote Border};
             }
@@ -316,7 +316,8 @@ border-top-right-radius:8px;
        <div id="title">{Title}</div>
        <div id="navigation">
        <span class="navlink"><a href="/">home</a></span>
-           <span class="navlink"><a href="/ask">ask</a></span><span class="navlink"><a href="http://moethemes.tumblr.com">theme</a></span>
+       <span class="navlink"><a href="http://moethemes.tumblr.com">theme</a></span>
+           <span class="navlink"><a href="/ask">ask</a></span>
            <span class="navlink"><a href={text:Link 1 URL}>{text:Link 1 Name}</a></span>
            <span class="navlink"><a href={text:Link 2 URL}>{text:Link 2 Name}</a></span>
            <span class="navlink"><a href={text:Link 3 URL}>{text:Link 3 Name}</a></span>
@@ -443,6 +444,5 @@ border-top-right-radius:8px;
                {/block:Posts}
         </ol>
         </div> <!-- container -->
-        <div style="position: absolute; bottom: 0; left:0; background-color: white; font-size: 8px; opacity:0.5; font-family: consolas, courier new, monospace; padding: 2px"><a href="http://moethemes.tumblr.com" style="color: black">theme by moethemes</a></div>
     </body>
 </html>
